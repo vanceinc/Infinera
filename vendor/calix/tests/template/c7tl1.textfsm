@@ -1,0 +1,4 @@
+Value command ([\s\S]*)
+
+Start
+  ^<H3>Input Format</H3>[\s\S]*<PRE><CODE>\s${command}<\/CODE> -> Record
