@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<HTML>
+<HEAD>
+    <TITLE>Introduction</TITLE>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+</HEAD>
+<BODY BGCOLOR="white">
+<H3><A NAME="messages">C7Tl1 TL1 Message Documentation</A></H3>
+<BLOCKQUOTE>
+    <H3>Description</H3>
+    <BLOCKQUOTE>
+        <b>Introduction:</b>
+        <P>
+
+            <ul> This document contains the TL1 command definitions for
+                all support commands of the C7 Optical Service
+                Transport Product.
+        <P>
+
+            Calix has defined the TL1 messages and parameters within
+            the guidelines of the Bellcore documents defined in the
+            "Reference Documents" section. Calix may not support all
+            parameter values identified by these Bellcore documents. In
+            some cases Calix has modified the TL1 message in order to
+            meet the needs of the C7 system and to give the user
+            greater flexibility. Each command specifies where the
+            command was defined and if Calix has modified. </ul>
+        <P>
+
+            <b>Message Classifications:</b>
+        <P>
+
+            <ul> Each message is assigned Category and a Security
+                Class.
+        <P>
+
+            The Category allows types of similar commands to be
+            grouped together easily. This enables users to identify
+            all commands which apply one type of object or grouping of
+            functionality. The customer can then easily click on the
+            related message. Examples of Categories are all T1
+            Provisioning commands, Security commands, etc.
+        <P>
+
+            The Security Class identifies which category the command
+            falls into for security access. </ul>
+        <P>
+
+            <b>Conventions and Notations:</b>
+        <P>
+
+            <ul> The following are conventions and notations used in
+                the command definitions. These characters are not seen when
+                transmitted but are included in the transmission and are read
+                by the terminal display.
+        <P>
+
+            <table border="2" cellpadding="5" width="80%">
+                <colgroup align="center">
+                <colgroup align="left">
+                    <tr align="center">
+                        <th>Notation</th>
+                        <th>Description</th>
+                    </tr>
+        <P>
+
+            <tr align="left">
+                <td> cr</td>
+                <td> A carriage return in American Standard Code for
+                    Information Interchange (ASCII).
+                </td>
+            </tr>
+        <P>
+
+            <tr align="left">
+                <td> lf</td>
+                <td> A line feed in ASCII.</td>
+            </tr>
+        <P>
+
+            <tr align="left">
+                <td> ^</td>
+                <td> The carat character indicates a blank must (and
+                    will) appear in the message.
+                </td>
+            </tr>
+        <P>
+
+            <tr align="left">
+                <td> [ ]</td>
+                <td> The square braces enclose an optional symbol or
+                    information unit (e.g., a[b]c represents abc or
+                    ac since b is optional). An optional parameter means
+                    that if a user inputs an empty field for an optional
+                    parameter, then a default value (or a default action)
+                    will be substituted automatically in the transmitted
+                    input field. In the case of an EDIT command the
+                    optional parameter means the value will not change
+                    unless input by the user.
+                </td>
+            </tr>
+        <P>
+
+            <tr align="left">
+                <td> < ></td>
+                <td> The angle brackets are used to enclose one or more
+                    information items (e.g. date, ctime, source identified,
+                    etc.). The angle brackets should not be included when
+                    entering the TL1 commands.
+                </td>
+            </tr>
+            </table>
+            </ul>
+        <P>
+
+            <b>Syntactial Characters:</b>
+        <P>
+
+            <ul> The following syntactical characters (in format
+                expression) shall be transmitted exactly as shown:
+        <P>
+
+
+            <table border="2" cellpadding="5" width="80%">
+                <colgroup align="center">
+                <colgroup align="left">
+                    <th>Syntactial Character</th>
+                    <th>Description</th>
+                    </tr>
+        <P>
+
+        <td> ;</td>
+        <td> The semi-colon is the end of a message delimitor.</td>
+        </tr><P>
+
+        <td> /* */</td>
+        <td> The pair of comment characters /* and */ are
+            used to delimit free format text.
+        </td>
+        </tr><P>
+
+        <td> ,</td>
+        <td> The comma separates parameters within a parameter
+            block.
+        </td>
+        </tr><P>
+
+        <td> :</td>
+        <td> A colon separates parameter blocks.</td>
+        </tr><P>
+
+        <td> -</td>
+        <td> A dash is always used in the command code when
+            modifiers are present to separate the verb, first
+            modifier, and second modifier (when
+            applicable).
+        </td>
+        </tr><P>
+
+        <td> <</td>
+        <td> The less than symbol is the Ready Indicator (refer to
+            TR-TSY-000831).
+        </td>
+        </tr><P>
+
+        <td> ></td>
+        <td> The greater than symbol is an End Of Output character
+            indicating more output associated with the response
+            will follow (refer to TR-TSY-000831).
+        </td>
+        </tr>
+        </table><P>
+
+        </ul></ul>
+        <P>
+
+            <b>Reference Documents:</b>
+        <P>
+
+            <ul> GR-199-CORE "Operations Application Messages - Memory
+                Administration Messages", Issue 3, February 1999, Revision
+                3, August 1999, OTGR Section 12.2.
+        <P>
+
+            GR-202-CORE "Network Maintenance: Loop Testing Messages At
+            The OS/TSC Interface", Issue 2, November 1995, OTGR Section
+            12.5R.
+        <P>
+
+            GR-833-CORE "Network Maintenance: Network Element and
+            Transport Surveillance Messages", Issue 3, February 1999,
+            OTGR Section 12.3.
+        <P>
+
+            TR-NWT-000835 "Operations Application Messages - Network
+            Element and Network System Security Administration
+            Messages", Issue 3, January 1993, OTGR Section 12.5.
+        <P>
+
+            GR-1093-CORE "Generic State Requirements for Network
+            Elements", Issue 1, October 1994, Revision 1, December 1995.
+            </ul>
+        <P>
+
+            <b>Access Identifier Definitions (AID):
+        <P>
+
+            </b>
+            <ul>
+                The access identifier defines entities within the system and
+                are of the following generic format:
+        <P>
+
+            (Node Id)-(Shelf Id)-(Slot Id)-(Port Id).....
+        <P>
+
+            (Node Id)-(Shelf Id)-(Slot Id)-(Port Id)-(Level 1 Id)- .....
+        <P>
+
+            (Node Id)-(Entity Id)
+        <P>
+
+            </ul>
+        <P>
+
+            <b>Abbreviations:
+        <P>
+
+            </b>
+            <ul>
+        <P>
+
+        <table border="2" cellpadding="5" width="80%">
+            <colgroup align="center">
+            <colgroup align="left">
+                <tr align="center">
+                    <th>Abbreviation</th>
+                    <th>Description</th>
+                </tr>
+                <tr align="left">
+                    <td> ACO</td>
+                    <td> Alarm Cutoff</td>
+                </tr>
+                <td> ACT</td>
+                <td> Activate</td>
+                </tr>
+                <td> ADSL</td>
+                <td> Asymmetic Digital Subscriber Line</td>
+                </tr>
+                <td> AID</td>
+                <td> Access Identifier</td>
+                </tr>
+                <td> ALM</td>
+                <td> Alarm</td>
+                </tr>
+                <td> ALW</td>
+                <td> Allow</td>
+                </tr>
+                <td> CANC</td>
+                <td> Cancel</td>
+                </tr>
+                <td> CRS</td>
+                <td> Cross-Connect</td>
+                </tr>
+                <td> EOC</td>
+                <td> Embedded Operations Channel</td>
+                </tr>
+                <td> FFP</td>
+                <td> Fast Facility Protection</td>
+                </tr>
+                <td> GOS</td>
+                <td> Grade of Service</td>
+                </tr>
+                <td> MSG</td>
+                <td> Autonomous Message</td>
+                </tr>
+                <td> OC3</td>
+                <td> Optical Carrier Level 3</td>
+                </tr>
+                <td> OC12</td>
+                <td> Optical Carrier Level 12</td>
+                </tr>
+                <td> OC48</td>
+                <td> Optical Carrier Level 48</td>
+                </tr>
+                <td> STBY</td>
+                <td> Standby</td>
+                </tr>
+                <td> SECU</td>
+                <td> Security</td>
+                </tr>
+                <td> TGRP</td>
+                <td> Test Group</td>
+                </tr>
+                <td> TL1</td>
+                <td> Translation Language 1</td>
+                </tr>
+                <td> TMC</td>
+                <td> Time Slot Management Channel</td>
+                </tr>
+                <td> TRPROF</td>
+                <td> Traffic Profile</td>
+                </tr>
+        </table>
+        <P>
+
+            </ul>
+        <P>
+            <BR>
+        <HR>
+</BODY>
+</HTML>
