@@ -1,0 +1,8 @@
+{
+    "LOG_DIR": "../../log/",
+    "LOG_LEVEL": "DEBUG",
+    "LOG_FILE": "tl1.log",
+    "TIMEOUT": 180,
+    "USER": "",
+    "PASS": ""
+}
